@@ -5,9 +5,12 @@ public class QuantumParallelism {
 	
 	private int[] Set_f() {
 		int[] f = new int[8];
+		int value = 0;
 		
-		for (int i=0;i<8;i++) {
-			f[i] = (int) (Math.random() * 2);
+		for (int i=0;i<8;i+=2) {
+			value = (int) (Math.random() * 2);
+			f[i] = value;
+			f[i+1] = value;
 		}
 		return f;
 	}
